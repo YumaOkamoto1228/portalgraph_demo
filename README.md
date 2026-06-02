@@ -6,7 +6,7 @@ Python側で取得した顔の座標データをUDP通信でUnityへ送信し、
 
 ## 動画[https://youtu.be/snJV44eKH0w]
 
-## システム構成 (Architecture)
+## システム構成
 - **顔認識・データ送信**: Python (OpenCV)
 - **3D環境・描画**: Unity (C#)
 - **通信プロトコル**: UDPソケット通信 (ローカルネットワーク)
