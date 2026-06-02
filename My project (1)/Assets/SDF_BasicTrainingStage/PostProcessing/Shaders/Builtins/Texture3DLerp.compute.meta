@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 31e9175024adfd44aba2530ff9b77494
+timeCreated: 1496933873
+licenseType: Store
+ComputeShaderImporter:
+  currentAPIMask: 4
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Texture3DLerp.compute
+  uploadId: 344044

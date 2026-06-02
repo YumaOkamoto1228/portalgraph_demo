@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5ab0816423f0dfe45841cab3b05ec9ef
+timeCreated: 1496835037
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DiscardAlpha.shader
+  uploadId: 344044

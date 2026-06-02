@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 34845e0ca016b7448842e965db5890a5
+timeCreated: 1519314976
+licenseType: Store
+ComputeShaderImporter:
+  currentAPIMask: 2228228
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/AutoExposure.compute
+  uploadId: 344044

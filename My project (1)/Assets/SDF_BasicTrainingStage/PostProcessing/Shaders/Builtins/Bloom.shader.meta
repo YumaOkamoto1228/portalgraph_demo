@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c1e1d3119c6fd4646aea0b4b74cacc1a
+timeCreated: 1489940191
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Bloom.shader
+  uploadId: 344044

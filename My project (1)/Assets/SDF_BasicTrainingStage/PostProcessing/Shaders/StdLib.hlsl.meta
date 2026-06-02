@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 20aeae489f6be6a48aec52447f49169c
+timeCreated: 1488887145
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/StdLib.hlsl
+  uploadId: 344044

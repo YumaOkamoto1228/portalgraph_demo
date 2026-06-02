@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e02724c54d545ad439d7a5fa991ae924
+timeCreated: 1488987302
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ExposureHistogram.hlsl
+  uploadId: 344044

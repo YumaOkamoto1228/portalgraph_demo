@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f7ea35cfb33fcad4ab8f2429ec103bef
+timeCreated: 1499679714
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Histogram.shader
+  uploadId: 344044

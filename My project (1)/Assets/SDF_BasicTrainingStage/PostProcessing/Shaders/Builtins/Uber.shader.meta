@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 382151503e2a43a4ebb7366d1632731d
+timeCreated: 1488883455
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Uber.shader
+  uploadId: 344044

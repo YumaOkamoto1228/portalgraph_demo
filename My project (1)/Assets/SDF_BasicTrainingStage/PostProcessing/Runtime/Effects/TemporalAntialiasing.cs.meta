@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5a7fc26078c70a6469392d9775f433be
+timeCreated: 1490188293
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/TemporalAntialiasing.cs
+  uploadId: 344044

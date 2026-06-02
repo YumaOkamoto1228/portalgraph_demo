@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 817a98c8f709269458e50b65910ed4bc
+timeCreated: 1490347846
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/FastApproximateAntialiasing.hlsl
+  uploadId: 344044

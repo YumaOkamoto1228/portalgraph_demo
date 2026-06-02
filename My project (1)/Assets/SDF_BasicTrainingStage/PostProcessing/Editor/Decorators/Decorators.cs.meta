@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d6ae47710b8593e41960a944bb29e6c3
+timeCreated: 1493051241
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/Decorators.cs
+  uploadId: 344044

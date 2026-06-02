@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: efd3e892ff9d0b94c94e039ad5619e5d
+timeCreated: 1493489448
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/FastApproximateAntialiasing.cs
+  uploadId: 344044

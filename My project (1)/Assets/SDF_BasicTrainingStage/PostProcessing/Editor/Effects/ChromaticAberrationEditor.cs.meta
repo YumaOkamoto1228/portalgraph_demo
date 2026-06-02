@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f8e5f5614c0d72445b292f4b16ab660b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ChromaticAberrationEditor.cs
+  uploadId: 344044

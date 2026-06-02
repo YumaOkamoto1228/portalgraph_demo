@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 40b924e2dad56384a8df2a1e111bb675
+timeCreated: 1491826542
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Vignette.cs
+  uploadId: 344044

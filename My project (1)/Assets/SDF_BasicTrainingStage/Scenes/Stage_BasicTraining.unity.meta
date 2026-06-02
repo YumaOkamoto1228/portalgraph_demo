@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: afe124a1136d6bb4fb53732b0a2cd1bf
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining.unity
+  uploadId: 344044

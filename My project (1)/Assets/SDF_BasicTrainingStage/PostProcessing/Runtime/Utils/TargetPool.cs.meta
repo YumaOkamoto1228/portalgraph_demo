@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3ae5839b763bada47af0cca23c360452
+timeCreated: 1495121926
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TargetPool.cs
+  uploadId: 344044

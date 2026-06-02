@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 67f9497810829eb4791ec19e95781e51
+timeCreated: 1503305114
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVO.shader
+  uploadId: 344044

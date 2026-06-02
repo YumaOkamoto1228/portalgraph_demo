@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f16ad9ee5ff13554b98568aa655d6bda
+timeCreated: 1489940178
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Sampling.hlsl
+  uploadId: 344044

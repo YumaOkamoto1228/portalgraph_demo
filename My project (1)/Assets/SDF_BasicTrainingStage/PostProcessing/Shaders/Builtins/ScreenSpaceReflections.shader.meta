@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f997a3dc9254c44459323cced085150c
+timeCreated: 1503577833
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScreenSpaceReflections.shader
+  uploadId: 344044

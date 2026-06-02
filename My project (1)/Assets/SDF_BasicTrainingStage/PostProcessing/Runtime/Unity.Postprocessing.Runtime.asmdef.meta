@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d60799ab2a985554ea1a39cd38695018
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Runtime/Unity.Postprocessing.Runtime.asmdef
+  uploadId: 344044

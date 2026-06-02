@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3e6879594f0f31c42b64e91e59fe78f6
+timeCreated: 1497734907
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl
+  uploadId: 344044

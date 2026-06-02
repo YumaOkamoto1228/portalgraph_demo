@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6dba4103d23a7904fbc49099355aff3e
+timeCreated: 1503754250
+licenseType: Store
+ComputeShaderImporter:
+  currentAPIMask: 131076
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/GaussianDownsample.compute
+  uploadId: 344044

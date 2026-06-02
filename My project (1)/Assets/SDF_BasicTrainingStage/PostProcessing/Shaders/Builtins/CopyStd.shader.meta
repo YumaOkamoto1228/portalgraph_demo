@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4bf4cff0d0bac3d43894e2e8839feb40
+timeCreated: 1502891195
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStd.shader
+  uploadId: 344044

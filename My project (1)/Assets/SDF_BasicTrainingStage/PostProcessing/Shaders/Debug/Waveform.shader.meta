@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3020ac7ece79a7f4eb789a236f8bd6c5
+timeCreated: 1499691145
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Waveform.shader
+  uploadId: 344044

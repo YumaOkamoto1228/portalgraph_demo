@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7fa986a4042ff154093d3772d2dc4fc9
+timeCreated: 1493025378
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Colors.hlsl
+  uploadId: 344044

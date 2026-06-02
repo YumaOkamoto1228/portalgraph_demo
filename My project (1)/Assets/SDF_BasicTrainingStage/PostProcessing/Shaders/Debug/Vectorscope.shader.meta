@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a71093f2a4fe26a40805c22739e10e4a
+timeCreated: 1499700462
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159610
+  packageName: Fighting Game Level - Basic Training Stage
+  packageVersion: 1.0
+  assetPath: Assets/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Vectorscope.shader
+  uploadId: 344044
