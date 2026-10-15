@@ -39,3 +39,9 @@ HoushouMarine/
 MMD4Mecanim_Beta_20201105/
 *.mp3
 *.vmd
+
+# キャリブレーション結果（PCごとに異なる）
+calib.json
+
+# ビルド出力
+[Bb]uild*/

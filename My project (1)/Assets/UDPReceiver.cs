@@ -1,86 +1,140 @@
 using System;
+using System.Diagnostics;
+using System.Globalization;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using UnityEngine;
 
+// tracker.py から「目の位置（Webカメラ基準・メートル）」を受信し、One Euro Filter で平滑化する
+// 受信データ: "x,y,z"  x:見ている人の右が+ / y:上が+ / z:Webカメラからの距離
 public class UDPReceiver : MonoBehaviour
 {
+    [Header("受信設定")]
+    public int port = 5005;
+
+    [Header("向きが逆に動くときだけチェック")]
+    public bool invertX = false;
+    public bool invertY = false;
+
+    [Header("One Euro Filter（ブレと遅延のバランス）")]
+    [Tooltip("小さいほど静止時のブレが減るが、ゆっくりした動きが遅れる (Hz)")]
+    public float minCutoff = 1.0f;
+    [Tooltip("奥行き(z)はノイズが大きいので左右上下より弱めにかける (Hz)")]
+    public float minCutoffZ = 0.5f;
+    [Tooltip("大きいほど速い動きへの追従が良くなる（遅延が減る）")]
+    public float beta = 5.0f;
+    public float dCutoff = 1.0f;
+
+    [Header("顔が見つからないときの目の位置（メートル）")]
+    public Vector3 defaultHead = new Vector3(0f, 0f, 0.6f);
+
+    // フィルタ後の目の位置（Webカメラ基準・メートル）
+    public Vector3 Head
+    {
+        get { lock (lockObj) return hasData ? filtered : defaultHead; }
+    }
+
     UdpClient udpClient;
-
-    [Header("長方形（直線）移動の調整")]
-    public float scaleX = 1.0f;  // 左右の移動量（倍率）
-    public float scaleY = 1.0f;  // 上下の移動量（倍率）
-    public float scaleZ = 0.01f;  // 奥行きの移動量（倍率。逆動する場合はマイナスにする）
-
-    [Header("基本位置のオフセット")]
-    // カメラの基準となる初期位置（画面の中心からの距離など）
-    public Vector3 baseOffset = new Vector3(0f, 0f, 0f); 
-
-    [Header("扇の中心（モニターの中心）")]
-    public Transform lookTarget;
-
-    [Header("スムージング設定")]
-    [Range(1f, 50f)]
-    public float lerpSpeed = 15f; 
-
-    private Vector3 targetCamPos;
+    Thread thread;
+    volatile bool running;
+    readonly object lockObj = new object();
+    Vector3 filtered;
+    bool hasData;
 
     void Start()
     {
         Application.targetFrameRate = 60;
-        udpClient = new UdpClient(5005);
-        targetCamPos = transform.position;
+        udpClient = new UdpClient(port);
+        running = true;
+        thread = new Thread(ReceiveLoop) { IsBackground = true };
+        thread.Start();
     }
 
-    void Update()
+    // 受信は別スレッドで行い、届いた順にフィルタへ通す（データが溜まって遅れるのを防ぐ）
+    void ReceiveLoop()
     {
-        if (udpClient != null && udpClient.Available > 0)
+        var filterXY = new OneEuroFilter();
+        var filterZ = new OneEuroFilter();
+        var clock = Stopwatch.StartNew();
+        IPEndPoint ep = new IPEndPoint(IPAddress.Any, 0);
+
+        while (running)
         {
             try
             {
-                IPEndPoint ep = new IPEndPoint(IPAddress.Any, 0);
                 byte[] data = udpClient.Receive(ref ep);
-                string text = Encoding.UTF8.GetString(data);
-                string[] parts = text.Split(',');
+                string[] parts = Encoding.UTF8.GetString(data).Split(',');
+                if (parts.Length < 3) continue;
 
-                if (parts.Length >= 3 && lookTarget != null)
+                var raw = new Vector3(
+                    float.Parse(parts[0], CultureInfo.InvariantCulture),
+                    float.Parse(parts[1], CultureInfo.InvariantCulture),
+                    float.Parse(parts[2], CultureInfo.InvariantCulture));
+                if (invertX) raw.x = -raw.x;
+                if (invertY) raw.y = -raw.y;
+
+                double t = clock.Elapsed.TotalSeconds;
+                // zのノイズで左右上下の速度推定が乱れないよう、別々にフィルタする
+                Vector3 xy = filterXY.Filter(new Vector3(raw.x, raw.y, 0f), t, minCutoff, beta, dCutoff);
+                Vector3 z = filterZ.Filter(new Vector3(0f, 0f, raw.z), t, minCutoffZ, beta, dCutoff);
+
+                lock (lockObj)
                 {
-                    float rawX = float.Parse(parts[0]);
-                    float rawY = float.Parse(parts[1]);
-                    float rawZ = float.Parse(parts[2]);
-
-                    float moveX = rawX * scaleX;
-                    float moveY = rawY * scaleY;
-                    float moveZ = rawZ * scaleZ; 
-
-                    Vector3 center = lookTarget.position;
-                    
-                    targetCamPos = new Vector3(
-                        center.x + moveX + baseOffset.x,
-                        center.y + moveY + baseOffset.y,
-                        center.z + moveZ + baseOffset.z
-                    );
+                    filtered = new Vector3(xy.x, xy.y, z.z);
+                    hasData = true;
                 }
             }
+            catch (SocketException) { /* 終了時の Close で発生する */ }
+            catch (ObjectDisposedException) { }
             catch (Exception e)
             {
-                Debug.LogWarning("UDP Receive Error: " + e.Message);
+                UnityEngine.Debug.LogWarning("UDP Receive Error: " + e.Message);
             }
-        }
-
-        // 毎フレーム滑らかに移動し、ターゲットを向き続ける
-        if (targetCamPos != Vector3.zero)
-        {
-            transform.position = Vector3.Lerp(transform.position, targetCamPos, Time.deltaTime * lerpSpeed);
-            
-            // ★ここを追加：常にターゲットを向く
-            transform.LookAt(lookTarget.position);
         }
     }
 
-    void OnApplicationQuit()
+    void OnDestroy()
     {
+        running = false;
         if (udpClient != null) udpClient.Close();
+    }
+
+    // 速く動いたときは追従を優先し、止まっているときはブレを強く抑えるフィルタ
+    // https://gery.casiez.net/1euro/
+    class OneEuroFilter
+    {
+        Vector3 prevX, prevDx;
+        double prevT;
+        bool initialized;
+
+        public Vector3 Filter(Vector3 x, double t, float minCutoff, float beta, float dCutoff)
+        {
+            if (!initialized)
+            {
+                initialized = true;
+                prevX = x;
+                prevDx = Vector3.zero;
+                prevT = t;
+                return x;
+            }
+
+            float dt = Mathf.Max((float)(t - prevT), 1e-4f);
+            prevT = t;
+
+            Vector3 dx = (x - prevX) / dt;
+            prevDx = Vector3.Lerp(prevDx, dx, Alpha(dCutoff, dt));
+
+            float cutoff = minCutoff + beta * prevDx.magnitude;
+            prevX = Vector3.Lerp(prevX, x, Alpha(cutoff, dt));
+            return prevX;
+        }
+
+        static float Alpha(float cutoff, float dt)
+        {
+            float tau = 1f / (2f * Mathf.PI * cutoff);
+            return 1f / (1f + tau / dt);
+        }
     }
 }
