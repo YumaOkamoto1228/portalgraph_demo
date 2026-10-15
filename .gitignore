@@ -45,3 +45,12 @@ calib.json
 
 # ビルド出力
 [Bb]uild*/
+
+# 第三者アセット（ステージ・MMD4Mecanim）
+SDF_BasicTrainingStage/
+SDF_BasicTrainingStage.meta
+MMD4Mecanim/
+MMD4Mecanim.meta
+HoushouMarine.meta
+*.mp3.meta
+*.vmd.meta
