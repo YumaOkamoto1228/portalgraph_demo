@@ -4,7 +4,7 @@
 Webカメラを用いてユーザーの顔をトラッキングし、モニターの奥に空間があるように錯覚させる立体視（Portalgraph風）システムです。
 Python側で取得した目の位置をUDP通信でUnityへ送信し、モニターを「窓」とみなした投影（Off-Axis Projection）でリアルタイムに描画することで、没入感の高い疑似3D体験を実現しました。
 
-## 動画[https://youtu.be/snJV44eKH0w]
+## 動画[https://youtu.be/KINKttTQQCA]
 
 ## システム構成
 - **顔認識・データ送信**: Python (OpenCV + MediaPipe Face Mesh)
