@@ -2040,6 +2040,10 @@ MonoBehaviour:
   minCutoffZ: 0.5
   beta: 5
   dCutoff: 1
+  prediction: 1
+  predictionLead: 0.01
+  maxPrediction: 0.1
+  velocityCutoff: 3
   defaultHead: {x: 0, y: 0, z: 0.6}
 --- !u!114 &330585549
 MonoBehaviour:
@@ -2062,7 +2066,7 @@ MonoBehaviour:
   webcamPitch: 0
   depthMode: 0
   depthGainCenter: 0.6
-  depthGain: 1
+  depthGain: 0.7
   dollyGain: 0
   nearClip: 0.01
 --- !u!1 &339807367 stripped

@@ -81,7 +81,7 @@ public class PerfOverlay : MonoBehaviour
         if (!visible) return;
         if (style == null)
         {
-            style = new GUIStyle(GUI.skin.label) { fontSize = 18 };
+            style = new GUIStyle(GUI.skin.label) { fontSize = 18, wordWrap = false };
             style.normal.textColor = Color.white;
         }
 
