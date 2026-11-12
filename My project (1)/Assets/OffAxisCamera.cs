@@ -28,11 +28,11 @@ public class OffAxisCamera : MonoBehaviour
     public enum DepthMode { Window, Dolly }
 
     [Header("前後の動きの扱い")]
-    [Tooltip("Window: 現実の窓と同じ（近づくと画角が広がり、キャラは小さく見える）\nDolly: 画角は固定のまま、カメラ自体が前後に動く（近づくとキャラが大きく見える）")]
-    public DepthMode depthMode = DepthMode.Dolly;
+    [Tooltip("Window: 現実の窓と同じ。目からモニターまでの距離をそのまま投影に使う（近づくと画角が広がり、箱の側面が多く見える）。枠と壁の境目がずれないのはこちらだけ\nDolly: 画角は固定のまま、カメラ自体が前後に動く（近づくとキャラが大きく見える。窓としては正しくなく、枠と壁の境目がずれる）")]
+    public DepthMode depthMode = DepthMode.Window;
     [Tooltip("普段座っている距離（メートル）。この距離で見え方が基準になる")]
     public float depthGainCenter = 0.6f;
-    [Tooltip("Window用: 前後(z)の動きの倍率。1=現実どおり")]
+    [Tooltip("Window用: 前後(z)の動きの倍率。1=現実どおりで、自然に見えるのは1だけ。\n1より大きいと、描画に使う目の位置が実際より画面に近くなり、箱やキャラが奥へ引き伸ばされて見える")]
     public float depthGain = 1f;
     [Tooltip("Dolly用: 現実で1m前後に動いたとき、カメラを何m動かすか（worldScale倍される）")]
     public float dollyGain = 3f;

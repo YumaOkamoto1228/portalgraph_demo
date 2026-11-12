@@ -54,3 +54,7 @@ MMD4Mecanim.meta
 HoushouMarine.meta
 *.mp3.meta
 *.vmd.meta
+
+# 動画（モデル・楽曲が映っているため公開しない）
+*.mp4
+*.mov

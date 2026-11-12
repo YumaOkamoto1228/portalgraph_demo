@@ -2060,9 +2060,9 @@ MonoBehaviour:
   worldScale: 4
   webcamOffset: {x: 0, y: 0.18, z: 0}
   webcamPitch: 0
-  depthMode: 1
+  depthMode: 0
   depthGainCenter: 0.6
-  depthGain: 1.5
+  depthGain: 1
   dollyGain: 0
   nearClip: 0.01
 --- !u!1 &339807367 stripped
